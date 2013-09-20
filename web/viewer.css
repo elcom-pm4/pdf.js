@@ -155,7 +155,6 @@ html[dir='rtl'] .innerCenter {
 #sidebarContainer {
   position: absolute;
   bottom: 0;
-  border: 1px solid red;
   width: 100%;
   visibility: hidden;
   -webkit-transition-duration: 200ms;
@@ -163,13 +162,13 @@ html[dir='rtl'] .innerCenter {
   transition-duration: 200ms;
   transition-timing-function: ease;
   z-index: 5;
-  height: 100px;
 
 }
 html[dir='ltr'] #sidebarContainer {
   -webkit-transition-property: left;
   transition-property: left;
-  left: -200px;
+  left: -1500px;
+  bottom: 15px;
 }
 html[dir='rtl'] #sidebarContainer {
   -webkit-transition-property: right;
@@ -203,7 +202,6 @@ html[dir='rtl'] #outerContainer.sidebarOpen > #sidebarContainer {
 html[dir='ltr'] #outerContainer.sidebarOpen > #mainContainer {
   -webkit-transition-property: left;
   transition-property: left;
-  left: 200px;
 }
 html[dir='rtl'] #outerContainer.sidebarOpen > #mainContainer {
   -webkit-transition-property: right;
@@ -212,8 +210,7 @@ html[dir='rtl'] #outerContainer.sidebarOpen > #mainContainer {
 }
 
 #sidebarContent {
-	border: 1px solid blue;
-	height: 100px;
+	height: 160px;
 	width: 100%;
   background-color: hsla(0,0%,0%,.1);
   box-shadow: inset -1px 0 0 hsla(0,0%,0%,.25);
@@ -250,7 +247,6 @@ html[dir='rtl'] #sidebarContent {
 
 #toolbarSidebar {
   height: 32px;
-  float: left;
   background-color: #424242; /* fallback */
   background-image: url(images/texture.png),
                     linear-gradient(hsla(0,0%,30%,.99), hsla(0,0%,25%,.95));
@@ -259,6 +255,8 @@ html[dir='rtl'] #sidebarContent {
               inset 0 -1px 0 hsla(0,0%,100%,.05),
               0 1px 0 hsla(0,0%,0%,.15),
               0 0 1px hsla(0,0%,0%,.1);
+	display: inline-block;
+    left: -1px;
 }
 
 #toolbarContainer, .findbar, .secondaryToolbar {
@@ -1024,15 +1022,14 @@ html[dir='rtl'] .verticalToolbarSeparator {
 }
 
 #thumbnailView {
-  padding: 10px 40px 0;
-  overflow-x: auto;
-  overflow-y: hidden;
-  white-space: nowrap;
+    margin: 0 20px 0 4px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 
 #thumbnailView a{
-  display: block;
-  float: left;
+  display: inline-block;
   white-space: nowrap;
 }
 

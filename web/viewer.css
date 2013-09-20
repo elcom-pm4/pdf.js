@@ -154,7 +154,7 @@ html[dir='rtl'] .innerCenter {
 
 #sidebarContainer {
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   width: 100%;
   visibility: hidden;
   -webkit-transition-duration: 200ms;
@@ -168,7 +168,6 @@ html[dir='ltr'] #sidebarContainer {
   -webkit-transition-property: left;
   transition-property: left;
   left: -1500px;
-  bottom: 15px;
 }
 html[dir='rtl'] #sidebarContainer {
   -webkit-transition-property: right;
@@ -210,7 +209,6 @@ html[dir='rtl'] #outerContainer.sidebarOpen > #mainContainer {
 }
 
 #sidebarContent {
-	height: 160px;
 	width: 100%;
   background-color: hsla(0,0%,0%,.1);
   box-shadow: inset -1px 0 0 hsla(0,0%,0%,.25);
